@@ -3,16 +3,49 @@
     --secondary-color: #ff993b;
     --dark-color: #292929;
     --white-color: #f3f3f3;
+    --bg-primary-color: #CDF0EA;
+    --font-primary-color: #1CD6CE;
+    --darkseid-blue: #102f44;
 }
 
 body {
     color: var(--dark-color);
+    background-color: var(--bg-primary-color);
 }
 
+/* ==== NAVIGATION ==== */
 nav {
-    background-color: var(--dark-color);
+    background-color: var(--bg-primary-color);
 }
 
+.brand-area-font {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.custom-toggler-icon {
+    color: var(--primary-color);
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+.text-primary-blue {
+    color: var(--primary-color);
+}
+
+.text-primary-teal:hover {
+    color: var(--font-primary-color);
+}
+
+.nav-area-font{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+/* ==== MAIN ==== */
 main>.container {
     padding: 60px 15px 0;
     margin-bottom: 5rem;
@@ -21,7 +54,30 @@ main>.container {
 
 h1,h2,h3,h4,h5,h6 {
     color: var(--primary-color);
+    font-family: 'Lexend Deca', sans-serif;
 }
+
+.main-content-area-font {
+    font-family: 'Lexend Deca', sans-serif;
+}
+/* === Button(s) === */
+.btn-blue {
+    background-color: var(--primary-color);
+    color: var(--font-primary-color);
+}
+
+.btn-blue:hover{
+    background-color: var(--bg-primary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-blue-outline {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
 
 .bsicon-color {
     color: indigo;
@@ -41,8 +97,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .checklist >li i {
-    color: var(--secondary-color);
-}
+    color: var(--font-primary-color);
+}   
 
 
 code[class*="language-"], pre[class*="language-"] {
@@ -51,24 +107,26 @@ code[class*="language-"], pre[class*="language-"] {
     word-wrap: break-word;
 }
 
-/* === Footer === */
+/* ==== FOOTER ==== */
 footer {
-    background-color: var(--dark-color);
+    background-color: var(--bg-primary-color);
+    color: var(--font-primary-color);
 }
 
 footer.footer-text {
     font-size: 16px;
+    font-family: 'Lexend Deca', sans-serif;
 }
 
 footer .social>a {
-    color: var(--white-color);
+    color: var(--primary-color);
     opacity: 0.75;
 
 }
 
 footer .social>a:hover{
     opacity: 0.90;
-    color: var(--secondary-color);
+    color: var(--font-primary-color);
 }
 
 
@@ -83,6 +141,7 @@ footer .social>a:hover{
 @media only screen and (max-width: 393px) {
     .footer-text {
         font-size: 10px;
+        font-family: 'Lexend Deca', sans-serif;
     }
 
     .iconsize >div i {
@@ -93,6 +152,7 @@ footer .social>a:hover{
 @media only screen and (max-width: 280px) {
     .footer-text {
         font-size: 9px;
+        font-family: 'Lexend Deca', sans-serif;
     }
 
     .iconsize >div i {

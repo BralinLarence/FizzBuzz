@@ -18,34 +18,39 @@
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/img/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Permanent+Marker&display=swap" rel="stylesheet">
   
 </head>
 
 <body class="d-flex flex-column h-100">
     <!-- ==== Nav Section ==== -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="/img/BralinLarence-Brand-Header-Logo-1.svg" class="d-inline-block align-text-top" height="24" width="100">APP NAME</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container-fluid ">
+            <a class="navbar-brand text-primary-blue text-primary-teal brand-area-font " href="#">FizzBuzz</a>
+            <button class="navbar-toggler btn-blue-outline" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="custom-toggler-icon"><i class="fa fa-bars"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active fw-bold text-primary-blue text-primary-teal nav-area-font" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="app.html">App</a>
+                        <a class="nav-link fw-bold text-primary-blue text-primary-teal nav-area-font" href="app.html">App</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="code.html">Code</a>
+                        <a class="nav-link fw-bold text-primary-blue text-primary-teal nav-area-font" href="code.html">Code</a>
                     </li>                    
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                        <a class="nav-link fw-bold text-primary-blue text-primary-teal nav-area-font" target="_blank" href="#">Git Repo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="#">About</a>
+                        <a class="nav-link fw-bold text-primary-blue text-primary-teal nav-area-font" target="_blank" href="#">About</a>
                     </li>
                 </ul>
             </div>
@@ -56,13 +61,14 @@
        <div class="container col-xxl-8 px-4 py-5">
             <div class="row g-5 py-5 rol-cols-1 row-cols-lg-2">
                 <div class="col-12 col-lg-6 order-last order-lg-first">
-                    <h1 class="display-5 fw-bold lh-1 mb-3">APP Name: A Coding Project </h1>
-                    <h4 class="lead">Live life one loop at a time. A javascript coding exercise using loops. Write a
-                        program that displays the numbers from 0-100. Display the even numbers in 
-                        <strong>BOLD</strong>.
+                    <h1 class="display-5 fw-bold lh-1 mb-3">FizzBuzz: A Coding Challenge </h1>
+                    <h4 class="lead"> When it counts, you FizzBuzz. A Javascropt coding exercise using loops. Write a program 
+                        that prints the numbers from 1 to 100. For each multiple of 3 display <strong>"Fizz"</strong> instead
+                        of the number and for each multiple of 5 display <strong>"Buzz"</strong>. If the number is a multiple of both,
+                        display <strong>"FizzBuzz"</strong>.
                     </h4>
-                    <ul class="fa-ul pt-2 checklist">
-                        <li><span class="fa-li"><i class="fas fa-check-square"></i></span>CSS and Bootstrap Layout</li>
+                    <ul class="fa-ul pt-2 text-primary-blue checklist main-content-area-font">
+                        <li><span class="fa-li"><i class="fas fa-check-square "></i></span>CSS and Bootstrap Layout</li>
                         <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Fundaments</li>
                         <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Loops</li>
                         <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Functions</li>
@@ -71,11 +77,11 @@
                         <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Boolean Logic</li>
                     </ul>
                     <div>
-                        <a type="button" class="btn btn-outline-dark btn-lg px-4 me-md-2" href="app.html">Try It Out!</a>
+                        <a type="button" class="btn btn-blue btn-lg px-4 me-md-2 main-content-area-font" href="app.html">Try It Out!</a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <img src="/img/Hundasher-1.svg" class="img-fluid center-block d-block mx-auto " alt="Hundasher Logo" width="700" height="500">
+                    <img src="/img/FizzBuzz-Logo-Main.svg" class="img-fluid center-block d-block mx-auto " alt="Hundasher Logo" width="700" height="500">
                 </div>
                 <h5 class="fw-bold mt-5">
                     <div class="d-flex">
@@ -94,13 +100,13 @@
     <footer class="footer mt-auto py-3">
         <div class="container-fluid">
             <div class="row row-cols-1 row-cols-lg-3 gy-2">
-                <div class="col order-last order-lg-first d-flex align-items-center justify-content-center text-light ">
-                    <div class="footer-text"><span class="text-mute">&copy;2022</span> Bralin Larence </div>
+                <div class="col order-last order-lg-first d-flex align-items-center justify-content-center">
+                    <div class="footer-text fw-bold text-primary-blue"><span class="text-mute">&copy;2022</span> Bralin Larence </div>
                 </div>
                 <div class="col d-flex align-items-center justify-content-sm-center justify-content-lg-center mb-2">
-                    <img src="/img/BralinLarence-Logo-1.svg" alt="Bralin Larence Logo" class="img-fluid"></img>
+                    <img src="/img/BralinLarence-Footer-Logo-Alt-1.svg" alt="Bralin Larence Logo" class="img-fluid text-color"></img>
                 </div>
-                <div class="col  px-5 d-flex align-items-center justify-content-center justify-content-lg-end">
+                <div class="col px-5 d-flex align-items-center justify-content-center justify-content-lg-end">
                     <div class="row">
                         <div class="col social"><a href="#" target="_blank"><i class="fab fa-github fa-2x"></i></a></div>
                         <div class="col social"><a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
@@ -117,4 +123,3 @@
     </script>
 </body>
 
-</html>
