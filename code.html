@@ -39,13 +39,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link active fw-bold text-primary-blue text-primary-teal nav-area-font" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link  fw-bold text-primary-blue text-primary-teal nav-area-font" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-bold text-primary-blue text-primary-teal nav-area-font" href="app.html">App</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold text-primary-blue text-primary-teal nav-area-font" href="code.html">Code</a>
+                        <a class="nav-link active fw-bold text-primary-blue text-primary-teal nav-area-font" href="code.html">Code</a>
                     </li>                    
                     <li class="nav-item">
                         <a class="nav-link fw-bold text-primary-blue text-primary-teal nav-area-font" target="_blank" href="#">Git Repo</a>
@@ -64,17 +64,138 @@
             <div class="row row-cols-1 row-cols-md-2">
                 <div class="col-lg-8">
                     <pre class="line-numbers"><code class="language-javascript">
-                            // Call Hello World
-                            function HelloWorld() {
-                            alert("Hello World");
-                            }
+                            // Controller function(s)
+// Function gets the values from the DOM input given by the user(s)
+function getValues()
+{
+  // Get Values
+  let fizzValue = parseInt(document.getElementById("fizzValue").value);
+  let buzzValue = parseInt(document.getElementById("buzzValue").value);
+
+  //check if values are numbers
+  if(Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) 
+  {
+    // Call generateNumbers to create the numbers
+    let fbData = FizzBuzz(fizzValue, buzzValue);
+
+    // Call displayNumbers to show the numbers or FizzBuzz words.
+    displayNumbers(fbData);
+  }
+  else
+  {
+    alert("You must enter integers");
+  }
+  
+}
+
+// Logic function(s)
+// Function generates the data and pushes it to an array called fbData
+// that is returned.
+function FizzBuzz(_fizzValue, _buzzValue)
+{
+    let fbData = [];
+    
+    for(let index = 1; index <= 100; index++) 
+    {
+      //Check to see if divisible by both 3 and 5
+      //Check to see if divisible by 3
+      //Check to see if divisible by 5
+      if (index % _fizzValue == 0 && index % _buzzValue == 0) {
+        fbData.push("FizzBuzz");
+      } else if (index % _fizzValue == 0) {
+        fbData.push("Fizz");
+      } else if (index % _buzzValue == 0) {
+        fbData.push("Buzz");
+      } else {
+        fbData.push(index);
+      }
+    }
+
+    return fbData;
+}
+
+
+// Display function(s)
+function displayNumbers(fbData)
+{
+
+    // Get the table body element from the page
+    let tableBody = document.getElementById("results");
+
+    // Get the row from the template
+    let templateRow = document.getElementById("fbTemplate");
+
+    //Clear the table first
+    tableBody.innerHTML = "";
+
+    for(let index = 0; index < fbData.length; index += 5)
+    {
+        let tableRow = document.importNode(templateRow.content, true);
+        
+        //grab only the columns in the template and put into an array
+        let rowCols = tableRow.querySelectorAll("td");
+
+        rowCols[0].classList.add(fbData[index]);
+        rowCols[0].textContent = fbData[index];
+
+        rowCols[1].classList.add(fbData[index + 1]);
+        rowCols[1].textContent = fbData[index + 1];
+
+        rowCols[2].classList.add(fbData[index + 2]);
+        rowCols[2].textContent = fbData[index + 2];
+
+        rowCols[3].classList.add(fbData[index + 3]);
+        rowCols[3].textContent = fbData[index + 3];
+
+        rowCols[4].classList.add(fbData[index + 4]);
+        rowCols[4].textContent = fbData[index + 4];
+
+        tableBody.appendChild(tableRow);
+    }
+}
                     </code>
                     </pre>
                 </div>
                 <div class="col-lg-4 main-content-area-font">
-                    <p>The Code is structured in one function.</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function that diplays an alert with a message of Hello World</p>
+                    <h5>Introduction</h5>
+                    <p>
+                        This code uses the <strong>Model View Controller (MVC)</strong> architectural pattern. 
+                        There are three separate components in this pattern such as Model, View, Controllers as shown in the name of the
+                        design pattern . Each function has its own responsibilities which makes it easier to maintain and update the 
+                        code base through it's life cycle. 
+                    </p>
+                    <h5>getValues</h5>
+                    <p>
+                        The controller function <strong>getValues</strong> calls two input values named "fizzValue" and "buzzValue". Since both values are strings
+                        we need to parse them into numbers and assign the values to variables. Next, we test both values to check if they are integers 
+                        using an if/else statement. If the values pass the integer check then, we call the logic function that 
+                        returns an array and assigns the array to <strong>fbData</strong>. The function displayData is called with the fbData
+                        array as an argument. In the Else block if the numbers fail we send a message telling the user to input integers.
+                    </p>
+                    <h5>fizzBuzz</h5>
+                    <p>
+                        Our logic function <strong>fizzBuzz</strong> is the model component of the code. The fizzValue and buzzValue are passed into 
+                        the function. Inside the function an empty array is created to store the data that is generated by the for loop and conditional 
+                        statements. The for loop starts at 1 and loops to 100. Each index checks to see if the number is divisible by 3, 5 or both.
+                        However, any input stored in the fizzValue and buzzValue variable will be the divisible each number is be tested by. To test 
+                        the numbers we use an if/elseif/else statement. See the following code:
+                        <pre class="line-numbers"><code class="language-javascript">
+                                if (index % _fizzValue == 0 && index % _buzzValue == 0) {
+                                    fbData.push("FizzBuzz");
+                                } else if (index % _fizzValue == 0) {
+                                    fbData.push("Fizz");
+                                } else if (index % _buzzValue == 0) {
+                                    fbData.push("Buzz");
+                                } else {
+                                    fbData.push(index);
+                                }
+                            </code>
+                        </pre>
+                        Finally, we return the array that assigns the values to a variable called fbData as seen in the getValues 
+                        controller function.
+                    </p>
+                    <h5>displayData</h5>
+                    <p></p>
                 </div>
 
             </div>

@@ -38,10 +38,10 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link active fw-bold text-primary-blue text-primary-teal nav-area-font" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link fw-bold text-primary-blue text-primary-teal nav-area-font" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold text-primary-blue text-primary-teal nav-area-font" href="app.html">App</a>
+                        <a class="nav-link active fw-bold text-primary-blue text-primary-teal nav-area-font" href="app.html">App</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-bold text-primary-blue text-primary-teal nav-area-font" href="code.html">Code</a>
@@ -75,12 +75,12 @@
                         <h5>Enter Values</h5>
                         <form class="row gy-2 gx-3" action="">
                             <div class="col">
-                                <input type="number" id="startValue" class="form-control" placeholder="Start Value" 
-                                    value="1" aria-label="Start Value">
+                                <input type="number" id="fizzValue" class="form-control" placeholder="Fizz Value" 
+                                    value="3" aria-label="Fizz Value">
                             </div>
                             <div class="col">
-                                <input type="number" id="endValue" class="form-control" placeholder="End Value" 
-                                    value="100" aria-label="End Value">
+                                <input type="number" id="buzzValue" class="form-control" placeholder="Buzz Value" 
+                                    value="5" aria-label="Buzz Value">
                             </div>
                             <div class="col-12 d-flex justify-content-start">
                                 <button id="btnSubmit" type="button" class="btn btn-blue btn-lg main-content-area-font" >Buzz It</button>
@@ -88,9 +88,10 @@
                         </form>
                         <h2 class="mt-5 border-bottom border-2 border-dark">Results</h2>
                         <div class="table-responsive">
-                            <table class="table table-striped table-sm">
+                            <table class="table table-striped table-sm ">
                                 <tbody id="results">
                                     <!-- Results Go Here -->
+                                   
                                 </tbody>
                             </table>
                         </div>
@@ -120,11 +121,24 @@
             </div>
         </div>
     </footer>
+    <!-- ==== Template(s) ===== -->
+    <template id="fbTemplate">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
         </script>
     <!-- Main JS -->
     <script src="/js/main.js"></script>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click", getValues);
+    </script>
 </body>
 </html>

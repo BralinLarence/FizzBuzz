@@ -100,6 +100,20 @@ h1,h2,h3,h4,h5,h6 {
     color: var(--font-primary-color);
 }   
 
+.Fizz {
+    color: #e34c26;
+    font-weight: bold;
+}
+
+.Buzz {
+    color: indigo;
+    font-weight: bold;
+}
+
+.FizzBuzz {
+    color: var(--font-primary-color);
+    font-weight: bold;
+}
 
 code[class*="language-"], pre[class*="language-"] {
     white-space: pre-wrap;
