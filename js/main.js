@@ -10,7 +10,7 @@ function getValues()
   if(Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) 
   {
     // Call generateNumbers to create the numbers
-    let fbData = fizzBuzz(fizzValue, buzzValue);
+    let fbData = fizzBuzzC(fizzValue, buzzValue);
 
     // Call displayNumbers to show the numbers or FizzBuzz words.
     displayData(fbData);
@@ -46,6 +46,55 @@ function fizzBuzz(_fizzValue, _buzzValue)
     }
 
     return fbData;
+}
+
+function fizzBuzzB(_fizzValue, _buzzValue)
+{
+  let fbData = [];
+  let Fizz = false;
+  let Buzz = false;
+
+  for(let i = 1; i <= 100; i++)
+  {
+    Fizz = i % _fizzValue == 0;
+    Buzz = i % _buzzValue == 0;
+
+    switch(true)
+    {
+      case Fizz && Buzz: {
+        fbData.push("FizzBuzz");
+        break;
+      }        
+      case Fizz:{
+        fbData.push("Fizz");
+        break;
+      }
+      case Buzz: {
+        fbData.push("Buzz");
+        break;
+      } 
+      default: {
+        fbData.push(i);
+        break;
+      }   
+    }
+  }
+
+  return fbData;
+}
+
+function fizzBuzzC(_fizzValue,_buzzValue)
+{
+  let fbData = [];
+
+  for(let i = 1; i <= 100; i++)
+  {
+    let value = (( i % _fizzValue == 0 ? 'Fizz' : '') + (i % _buzzValue == 0 ? 'Buzz' : '') || i );
+
+    fbData.push(value);
+  }
+
+  return fbData;
 }
 
 

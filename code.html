@@ -48,7 +48,7 @@
                         <a class="nav-link active fw-bold text-primary-blue text-primary-teal nav-area-font" href="code.html">Code</a>
                     </li>                    
                     <li class="nav-item">
-                        <a class="nav-link fw-bold text-primary-blue text-primary-teal nav-area-font" target="_blank" href="#">Git Repo</a>
+                        <a class="nav-link fw-bold text-primary-blue text-primary-teal nav-area-font" target="_blank" href="https://github.com/BralinLarence/FizzBuzz">Git Repo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-bold text-primary-blue text-primary-teal nav-area-font" target="_blank" href="#">About</a>
@@ -195,7 +195,35 @@ function displayNumbers(fbData)
                         controller function.
                     </p>
                     <h5>displayData</h5>
-                    <p></p>
+                    <p>
+                        The view function named displayData begins by getting two elements and assigning them to variables tableBody and 
+                        templateRow. After clearing the tableBody a for loop is used to access the data and structuring it to display 
+                        the data. Inside the for loop we import the templateRow and assign it to a varialbe called tableRow. 
+                        Next, the element td is queried into an array and assigned to the the variable rowCols so that we can insert data and other 
+                        functionality into the table row. Because we are using a node we can increment the loop by 5. Then assigne the 
+                        data to the columns as shown in the following code:
+                        <pre class="line-numbers"> <code class="language-javascript">
+                                rowCols[0].classList.add(fbData[index]);
+                                rowCols[0].textContent = fbData[index];
+
+                                rowCols[1].classList.add(fbData[index + 1]);
+                                rowCols[1].textContent = fbData[index + 1];
+
+                                rowCols[2].classList.add(fbData[index + 2]);
+                                rowCols[2].textContent = fbData[index + 2];
+
+                                rowCols[3].classList.add(fbData[index + 3]);
+                                rowCols[3].textContent = fbData[index + 3];
+
+                                rowCols[4].classList.add(fbData[index + 4]);
+                                rowCols[4].textContent = fbData[index + 4];
+
+                                tableBody.appendChild(tableRow);
+                            </code>
+                        </pre> 
+                        In the code above we see that there is a a classList that is added. This allows us to manipulate the display
+                        with CSS code. finally we append the tableRow node to the tableBody. All the editing is done in memory.
+                    </p>
                 </div>
 
             </div>
@@ -211,10 +239,10 @@ function displayNumbers(fbData)
                 <div class="col d-flex align-items-center justify-content-sm-center justify-content-lg-center mb-2">
                     <img src="/img/BralinLarence-Footer-Logo-Alt-1.svg" alt="Bralin Larence Logo" class="img-fluid text-color"></img>
                 </div>
-                <div class="col px-5 d-flex align-items-center justify-content-center justify-content-lg-end">
+                <div class="col px-5 d-flex align-items-center justify-content-center justify-content-lg-center">
                     <div class="row">
-                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-github fa-2x"></i></a></div>
-                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
+                        <div class="col social"><a href="https://github.com/BralinLarence/FizzBuzz" target="_blank"><i class="fab fa-github fa-2x"></i></a></div>
+                        <div class="col social"><a href="https://www.linkedin.com/in/bralin-r-2791b9253/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
                         <!--<div class="col social"><a href="#" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></div>
                         <div class="col social"><a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i></a></div> -->
                     </div>
